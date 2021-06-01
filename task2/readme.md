@@ -1,4 +1,4 @@
-#uncomment and comment desirable and undesirable modes.
+# uncomment and comment desirable and undesirable modes.
 
 Имеются два текстовых файла: input.txt и patterns.txt. Это файлы с произвольным текстом, где input.txt состоит из одной или более количества строк а patterns.txt это набор строк для поиска, по одной на строку
 
