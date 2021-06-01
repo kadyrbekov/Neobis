@@ -34,13 +34,13 @@ function getCommonItems1(array1, array2) {
 //console.log(getCommonItems1(arr,searchArr));
 
 // !!!!second mode: if position and string content match then print
-// for (i = 0; i < arr.length; i++) 
-// {
-//     if (arr[i] == searchArr[i])
-//     {
-//         console.log(arr[i])
-//     }
-// }
+for (i = 0; i < arr.length; i++) 
+{
+    if (arr[i] == searchArr[i])
+    {
+        console.log(arr[i])
+    }
+}
 
 // !!!third mode
 function CompareStrings( stringToCheck1, stringToCheck2)
