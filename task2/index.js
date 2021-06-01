@@ -30,22 +30,14 @@ function getCommonItems1(array1, array2) {
 
 //console.log(getCommonItems1(arr,searchArr));
 
-
-function getCommonItems2(array1, array2) {
-    var common = []; 
-    
-    for (var i = 0; i < array2.length; i++) {
-      for (var j = 0; j < array2.length; j++) {
-        if (array2[i] == array1[j] && array2.indexOf(array2[i]) == array1.indexOf(array1[j])) { 
-          common.push(array2[i]);
-        }
-      }
+// second mode: if position and string content match then print
+for (i = 0; i < arr.length; i++) 
+{
+    if (arr[i] == searchArr[i])
+    {
+        console.log(arr[i])
     }
-   
-    return common; // Return the common items
-  }
-
-console.log(getCommonItems2(arr, searchArr));
+}
 // first mode: if any match then print // bad try
 
 // for(var i = 0; i < arr.length; i++){
