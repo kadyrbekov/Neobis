@@ -1,4 +1,4 @@
-Привет!
-
-
-Poka!
+hello
+bye
+wherever
+yes!

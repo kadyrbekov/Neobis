@@ -1,6 +1,9 @@
 var fs = require('fs'); //importing a file system module
 var arr;
 
+var stringSimilarity = require("string-similarity");
+
+//var similarity = stringSimilarity.compareTwoStrings("healed", "sealed");
 
 arr = fs.readFileSync('input.txt');
 arr = arr.toString();
@@ -13,7 +16,7 @@ searchArr = searchArr.toString();
 searchArr = searchArr.split('\n');
 //console.log(searchArr);
 
-// first mode: if any match then print
+// !!!first mode: if any match then print
 function getCommonItems1(array1, array2) {
     var common = []; 
     
@@ -30,14 +33,51 @@ function getCommonItems1(array1, array2) {
 
 //console.log(getCommonItems1(arr,searchArr));
 
-// second mode: if position and string content match then print
+// !!!!second mode: if position and string content match then print
+// for (i = 0; i < arr.length; i++) 
+// {
+//     if (arr[i] == searchArr[i])
+//     {
+//         console.log(arr[i])
+//     }
+// }
+
+// !!!third mode
+function CompareStrings( stringToCheck1, stringToCheck2)
+{
+   
+
+    var counter = 0;
+    for (var i = 0; i < stringToCheck1.length; i++)
+    {
+        if (stringToCheck1[i] != stringToCheck2[i])
+        {
+            counter++;
+        }
+    }
+    if (counter > 1)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+
 for (i = 0; i < arr.length; i++) 
 {
-    if (arr[i] == searchArr[i])
+    if (CompareStrings(arr[i],searchArr[i]))
     {
         console.log(arr[i])
     }
 }
+
+
+
+
+
+
 // first mode: if any match then print // bad try
 
 // for(var i = 0; i < arr.length; i++){
